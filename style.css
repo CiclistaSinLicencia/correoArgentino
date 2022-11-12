@@ -1,0 +1,407 @@
+*, *::before, *::after {
+ box-sizing: border-box;
+font-family:'Poppins', sans-serif;
+margin: 0px;
+padding: 0px;
+}
+
+:root{
+
+    --clr-naranjaCorreo-200:#fbd746;
+    --clr-naranjaCorreo-300:#ffcc04;
+    --clr-naranjaCorreo-400:#cfa500;
+    --clr-azulCorreo-300:#7b9aff;
+    --clr-azulCorreo-400:#3e5294;
+    --clr-azulCorreo-500:#24315c;
+}
+
+
+  .header-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffcc04;
+    z-index: 99;
+    width: 100%;
+    height: 3.5em;
+    top: 0px;
+    left: 0px;
+    padding-inline: 2em;
+  }
+  .header-anchor-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+  }
+
+  
+.header-logo{
+    width: 150px;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-nav a{
+
+color: #222;
+text-decoration: none;
+font-weight: 500;
+transition: 0.2s color;
+border-bottom: 3px solid var(--clr-naranjaCorreo-300);
+margin-bottom: -3px;
+transition: 0.2s;
+}
+
+.header-nav a:hover{
+    border-bottom: 3px solid var(--clr-azulCorreo-500);
+
+}
+/*-------------------------
+          BANNER
+--------------------------*/
+
+.banner-wrapper{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/banner_camion.jpg) ;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media(max-width:700px){
+    .banner-wrapper{
+        background-position:70%;
+        background-size:initial;
+       
+        height: 92vh;
+    }
+}
+
+.banner-title{
+    z-index: 1;
+    color:white;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.banner-rastreo-ctn{
+display: flex;
+
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
+padding-inline: 20px;
+}
+
+@media(max-width:600px){
+    .banner-rastreo-ctn{
+        flex-direction: column;
+    }
+    .banner-rastreo-btn{
+        width: 100%;
+    }
+}
+
+.banner-rastreo-input{
+    font-size: 22px;
+border: 0px;
+height: 100%;
+padding: 0.4em 8px;
+width: 100%;
+}
+.banner-rastreo-btn{
+background-color: var(--clr-naranjaCorreo-300);
+cursor: pointer;
+transition: 0.2s background-color;
+border: 0px;
+outline: 0px;
+font-size: 22px;
+padding: 0.4em 1em;
+font-weight: 500;
+}
+.banner-rastreo-btn:hover{
+    background-color: var(--clr-naranjaCorreo-200);
+}
+
+/*-------------------------
+          BANNER LOGOS
+--------------------------*/
+
+.banner-logos-wrapper{
+display: grid;
+grid-template-columns: repeat(6, minmax(60px,150px));
+
+position: relative;
+top: -120px;
+justify-content: center;
+
+}
+
+
+.banner-logos-ctn *{
+    max-width: clamp(60px,5vw, 100px);
+    }
+
+
+.banner-logos-ctn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor:pointer;
+}
+.banner-logos-ctn a{
+color: white;
+text-decoration: none;
+font-size: 18px;
+padding-top: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+@media(max-width:700px){
+
+    .banner-logos-wrapper{
+        grid-template-columns: repeat(3, minmax(50px,1fr));
+       top: 0px;
+    }
+
+    .banner-logos-ctn{
+        background-color: var(--clr-azulCorreo-500);
+        padding: 20px;
+    }
+}
+
+  /*-------------------------
+            DROPDOWN MOBILE
+  --------------------------*/
+
+    .dropdown {
+      position: relative;
+      width: 100%;
+      display: none;
+      justify-content: right; /* posicion del boton */
+    }
+  
+    .burgerIcon {
+      position: relative;
+      width: 20px;
+      height: 25px;
+      cursor: pointer;
+      background-color: #00000000;
+      border: none;
+      margin-right: 20px;
+      z-index: 10;
+      pointer-events: none;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      height: 100%;
+   
+      transform: translate(120%);
+      transition: 0.2s ease-out; /* velocidad de apertura Menu */
+      top: calc(100% + 1em);
+      justify-content: right;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+    }
+  
+    .dropdown-closeBtn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 45px;
+      bottom: -10px;
+      position: absolute;
+      cursor: pointer;
+      z-index: 999;
+    }
+  
+    .dropdown-closeBtn-backG {
+      transition: 0.5s;
+  }
+  
+  #dropdown-mobile { /* Quitado de estilos al checkBox */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+    #dropdown-mobile:checked~  .dropdown-closeBtn-backG {
+      position: fixed;
+      background-color: #1a274ff4;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      right: 0px;
+      top: 56px;
+
+    }
+  
+    #dropdown-mobile:checked~.dropdown-menu {
+      transform: translate(40px);
+    }
+  
+    .btn-menu-dropdown {
+    text-align: right;
+      width: 100%;
+      font-size: 16px;
+      padding:2em 2em;
+  
+      color: white;
+      border: none;
+      font-weight: 500;
+      transition: 0.5s linear;
+      cursor: pointer;
+    outline: none;
+      text-decoration: none;
+    }
+    .btn-menu-dropdown:last-child{
+        border-radius: 0px 0px 0px 20px;
+    }
+  
+    .btn-menu-dropdown:hover{
+      color: var(--clr-naranjaCorreo-200);
+    
+    }
+  
+    .burgerIcon .bar {
+      display: inline-block;
+      width: 100%;
+      height: 3px;
+      background-color: var(--clr-azulCorreo-500);
+      border-radius: 8px;
+      position: absolute;
+      top: calc(70% - 6px);
+      left: 0;
+      transition: all 0.5s;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+  
+    #dropdown-mobile~.burgerIcon span:first-child {
+      transform: translateY(-31.5px);
+      animation-name: rotate-base-1;
+    }
+  
+    #dropdown-mobile:checked~.burgerIcon span:first-child {
+      animation-name: rotate-1;
+    }
+  
+    #dropdown-mobile~.burgerIcon span:last-child {
+      transform: translateY(31.5px);
+      animation-name: rotate-base-2;
+    }
+  
+    #dropdown-mobile:checked~.burgerIcon span:last-child {
+      animation-name: rotate-2;
+    }
+  
+    #dropdown-mobile:checked~.burgerIcon span:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    /* -------------------AnimacionBurger-------------------  */
+    @keyframes rotate-1 {
+  
+      /* X */
+      0% {
+        transform: translateY(-6px);
+      }
+  
+      50% {
+        transform: translateY(0);
+      }
+  
+      100% {
+        transform: rotate(-45deg);
+        background-color: #ff6294;
+      }
+    }
+  
+    @keyframes rotate-base-1 {
+  
+      /* Y */
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        background-color: #ff6294;
+      }
+  
+      50% {
+        transform: rotate(0deg);
+      }
+  
+      100% {
+        transform: translateY(-6px);
+      }
+    }
+  
+    @keyframes rotate-2 {
+  
+      /* X */
+      0% {
+        transform: translateY(6px);
+      }
+  
+      50% {
+        transform: translateY(0);
+      }
+  
+      100% {
+        transform: rotate(45deg);
+        background-color: #ff6294;
+      }
+    }
+  
+    @keyframes rotate-base-2 {
+  
+      /* Y */
+      0% {
+        transform: translateY(0) rotate(45deg);
+        background-color: #ff6294;
+      }
+  
+      50% {
+        transform: rotate(0deg);
+      }
+  
+      100% {
+        transform: translateY(6px);
+      }
+    }
+  
+
+
+
+    /*-------------------------
+              RESPONSIVE
+    --------------------------*/
+
+    @media(max-width:1000px){
+
+        .header-nav{
+            display: none;
+        }
+
+        .dropdown{
+            display: flex;
+        }
+    }
