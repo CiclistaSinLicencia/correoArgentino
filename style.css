@@ -11,7 +11,8 @@ padding: 0px;
     --clr-naranjaCorreo-300:#ffcc04;
     --clr-naranjaCorreo-400:#e2b70c;
     --clr-azulCorreo-300:#7b9aff;
-    --clr-azulCorreo-400:#3e5294;
+    --clr-azulCorreo-350:#7b9aff;
+    --clr-azulCorreo-400:#2e489e;
     --clr-azulCorreo-500:#24315c;
 
     --margin-bottom:7em;
@@ -236,19 +237,25 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-height: 200px;
+max-height: 300px;
 border: 0px;
 outline: 0px;
 margin-bottom:var(--margin-bottom);
 padding-inline: 2em;
 }
 .filatelia-ctn img{
-  width: 100%;
+  max-width: 80em;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
 }
+.filatelia-ctn:hover img{
+scale: 1.01;
+}
+
 
 /*-------------------------
           NOTICIAS
@@ -265,23 +272,31 @@ margin-block: 5em;
   color: var(--clr-azulCorreo-400);
 }
 
+.noticias-element *{
+  transition: 0.2s;
+  text-decoration: none;
+}
+.noticias-element:hover .noticias-element-title{
+
+text-decoration: underline;
+}
 .noticias-img-ctn{
 width: 100%;
 margin-top: 2em;
-
+text-decoration: none;
 }
 .noticias-img{
   width: 100%;
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+
   object-position: top;
 }
 
 
 .noticias-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
-  gap: 3em;
+  grid-template-columns: repeat(3, minmax(200px,350px));
+  gap: 4em;
 justify-content: center;
 }
 
@@ -294,6 +309,7 @@ justify-content: center;
 }
 .noticias-element-txt{
   font-size: 14px;
+color: #111;
 }
 
 .noticias-element-btn{
@@ -314,7 +330,7 @@ background-color: var(--clr-naranjaCorreo-300);
 
 .footer-ctn{
 display: grid;
-grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fit,minmax(200px, 270px));
 gap: 2em;
 padding-top: 2em;
 padding-bottom: 2em;
@@ -327,6 +343,21 @@ padding-bottom: 2em;
   margin-inline: 2em;
 }
 
+.footer-ctn-redes svg{
+  transition: 0.2s;
+  width: 35px;
+  height: 35px;
+  fill: #333;
+
+}
+
+.footer-ctn-redes svg:hover{
+  fill: var(--clr-azulCorreo-400);
+}
+#instagram{
+  width: 25px;
+}
+
 .footer-column-title{
   color: #111;
   font-weight: 500;
@@ -337,9 +368,10 @@ padding-bottom: 2em;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
+  transition: 0.2s;
 }
 .footer-column a:hover{
-  color: #666;
+  color: var(--clr-azulCorreo-400);
 }
 
 /*----------End----------
