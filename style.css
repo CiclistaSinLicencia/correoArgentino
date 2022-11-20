@@ -11,7 +11,7 @@ padding: 0px;
     --clr-naranjaCorreo-300:#ffcc04;
     --clr-naranjaCorreo-400:#e2b70c;
     --clr-azulCorreo-300:#7b9aff;
-    --clr-azulCorreo-350:#7b9aff;
+    --clr-azulCorreo-350:#496bdd;
     --clr-azulCorreo-400:#2e489e;
     --clr-azulCorreo-500:#24315c;
 
@@ -95,7 +95,6 @@ font-size: 14px;
     width: 100%;
     height: 100vh;
 
-
     display: flex;
     align-items: center;
     justify-content: end;
@@ -103,6 +102,7 @@ font-size: 14px;
 }
 .banner-wrapper img{
   position: absolute;
+
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -188,45 +188,32 @@ height: 100%;
 justify-content: center;
 background-color: var(--clr-azulCorreo-500);
 row-gap: 1em;
-
-padding-block: 1em;
 }
-
-
-.banner-logos-ctn *{
-    width: 50px;
-    
-    }
 
 
 .banner-logos-ctn{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     cursor:pointer;
-    
+    min-height: 5em;
 }
 .banner-logos-ctn a{
 color: white;
 text-decoration: none;
 font-size: 16px;
-padding-top: 10px;
+
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-
+transition: 0.2s;
+height: 100%;
+width: 100%;
 }
 
+.banner-logos-ctn a:hover{
 
-@media(max-width:700px){
-    .banner-logos-wrapper{
-        grid-template-columns: repeat(3, minmax(50px,1fr));
-       top: 0px;
-    }
+  background-color: var(--clr-azulCorreo-350);
 }
-
 
 
 /*-------------------------
@@ -371,7 +358,7 @@ padding-bottom: 2em;
   transition: 0.2s;
 }
 .footer-column a:hover{
-  color: var(--clr-azulCorreo-400);
+  color: var(--clr-azulCorreo-350);
 }
 
 /*----------End----------
