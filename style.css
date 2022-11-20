@@ -20,8 +20,8 @@ padding: 0px;
 hr{
   border: 0px;
   outline: 0px;
-  height: 1px;
-  background-color: #222;
+  height: 0.8px;
+  background-color: black;
 }
 
   .header-wrapper {
@@ -93,12 +93,20 @@ font-size: 14px;
 
     width: 100%;
     height: 100vh;
-    background-image: url(/img/banner_camion.jpg) ;
-    background-position: center;
+
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
+}
+.banner-wrapper img{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.4);
 }
 @media(max-width:700px){
     .banner-wrapper{
@@ -111,7 +119,7 @@ font-size: 14px;
 
 .banner-title{
     z-index: 1;
-    color:white;
+    color:floralwhite;
     font-weight: 500;
     margin-bottom: 25px;
     text-align: center;
@@ -126,6 +134,7 @@ align-items: center;
 justify-content: center;
 gap: 5px;
 padding-inline: 20px;
+margin-bottom: 6em;
 }
 
 @media(max-width:600px){
@@ -143,6 +152,8 @@ border: 0px;
 height: 100%;
 padding: 0.2em 8px;
 width: 100%;
+border-radius: 8px 0px 0px 8px;
+background-color: floralwhite;
 }
 .banner-rastreo-btn{
 background-color: var(--clr-naranjaCorreo-300);
@@ -153,6 +164,7 @@ outline: 0px;
 font-size: 20px;
 padding: 0.2em 1em;
 font-weight: 500;
+border-radius: 0px 8px 8px 0px;
 }
 .banner-rastreo-btn:hover{
     background-color: var(--clr-naranjaCorreo-200);
@@ -169,17 +181,20 @@ font-weight: 500;
 }
 .banner-logos-wrapper{
 display: grid;
-grid-template-columns: repeat(6, minmax(60px,150px));
+grid-template-columns: repeat(auto-fit, minmax(100px,150px));
 width: 100%;
+height: 100%;
 justify-content: center;
-scale: 0.9;
-gap: 2em;
-height: 8em;
+background-color: var(--clr-azulCorreo-500);
+row-gap: 1em;
+
+padding-block: 1em;
 }
 
 
 .banner-logos-ctn *{
-    max-width: clamp(60px,5vw, 100px);
+    width: 50px;
+    
     }
 
 
@@ -189,6 +204,7 @@ height: 8em;
     justify-content: center;
     flex-direction: column;
     cursor:pointer;
+    
 }
 .banner-logos-ctn a{
 color: white;
@@ -199,21 +215,14 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
 }
-.banner-logos-ctn:hover *{
-  scale: 1.1;
-}
+
 
 @media(max-width:700px){
-
     .banner-logos-wrapper{
         grid-template-columns: repeat(3, minmax(50px,1fr));
        top: 0px;
-    }
-
-    .banner-logos-ctn{
-        background-color: var(--clr-azulCorreo-500);
-        padding: 20px;
     }
 }
 
@@ -231,7 +240,7 @@ height: 200px;
 border: 0px;
 outline: 0px;
 margin-bottom:var(--margin-bottom);
-
+padding-inline: 2em;
 }
 .filatelia-ctn img{
   width: 100%;
@@ -252,6 +261,7 @@ margin-block: 5em;
 .noticias-wrapper h2{
   text-align: center;
   font-weight: 500;
+
   color: var(--clr-azulCorreo-400);
 }
 
@@ -271,7 +281,7 @@ margin-top: 2em;
 .noticias-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
-  gap: 4em;
+  gap: 3em;
 justify-content: center;
 }
 
@@ -280,10 +290,10 @@ justify-content: center;
 .noticias-element-title{
   font-weight: 600;
   color: var(--clr-azulCorreo-400);
-
+  font-size: 16px;
 }
 .noticias-element-txt{
-
+  font-size: 14px;
 }
 
 .noticias-element-btn{
@@ -319,12 +329,14 @@ padding-bottom: 2em;
 
 .footer-column-title{
   color: #111;
-  font-weight: 500
+  font-weight: 500;
+  font-size: 18px;
 }
 .footer-column a{
   color: #333;
   text-decoration: none;
   font-weight: 500;
+  font-size: 14px;
 }
 .footer-column a:hover{
   color: #666;
