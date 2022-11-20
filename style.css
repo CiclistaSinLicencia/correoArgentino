@@ -45,12 +45,12 @@ hr{
   /* Scrollbar */
   ::-webkit-scrollbar {
   background-color: #333;
-  width: 15px;
+  width: 5px;
   }
   ::-webkit-scrollbar-thumb {
-  border-radius: 100vw;
-  background-color: #aaaaaa;
-  border: 3.2px solid #333;
+
+  background-color: var(--clr-azulCorreo-300);
+
   }
   ::-webkit-scrollbar-thumb:hover {
   background-color: #777;
