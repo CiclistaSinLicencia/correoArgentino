@@ -13,6 +13,8 @@ padding: 0px;
     --clr-azulCorreo-300:#7b9aff;
     --clr-azulCorreo-400:#3e5294;
     --clr-azulCorreo-500:#24315c;
+
+    --margin-bottom:7em;
 }
 
 hr{
@@ -159,15 +161,20 @@ font-weight: 500;
 /*-------------------------
           BANNER LOGOS
 --------------------------*/
-
+.banner-wrapper-logos{
+  width: 100%;
+  background-color: var(--clr-azulCorreo-500);
+  height: 100%;
+  margin-bottom: var(--margin-bottom);
+}
 .banner-logos-wrapper{
 display: grid;
 grid-template-columns: repeat(6, minmax(60px,150px));
-
-position: relative;
-top: -120px;
+width: 100%;
 justify-content: center;
-scale: 0.8;
+scale: 0.9;
+gap: 2em;
+height: 8em;
 }
 
 
@@ -186,12 +193,15 @@ scale: 0.8;
 .banner-logos-ctn a{
 color: white;
 text-decoration: none;
-font-size: 14px;
+font-size: 16px;
 padding-top: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+}
+.banner-logos-ctn:hover *{
+  scale: 1.1;
 }
 
 @media(max-width:700px){
@@ -217,13 +227,15 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-padding-inline: 7em;
+height: 200px;
 border: 0px;
 outline: 0px;
-margin-bottom:2em;
+margin-bottom:var(--margin-bottom);
+
 }
 .filatelia-ctn img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
@@ -234,7 +246,7 @@ margin-bottom:2em;
 --------------------------*/
 .noticias-wrapper{
 width: 100%;
-padding-inline: 7em;
+padding-inline: 2em;
 margin-block: 5em;
 }
 .noticias-wrapper h2{
@@ -258,17 +270,20 @@ margin-top: 2em;
 
 .noticias-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3em;
-    justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+  gap: 4em;
+justify-content: center;
 }
+
+
+
 .noticias-element-title{
   font-weight: 600;
   color: var(--clr-azulCorreo-400);
-  padding-right: 2em;
+
 }
 .noticias-element-txt{
-padding-right: 2em;
+
 }
 
 .noticias-element-btn{
@@ -289,19 +304,17 @@ background-color: var(--clr-naranjaCorreo-300);
 
 .footer-ctn{
 display: grid;
-grid-template-columns: repeat(3,1fr);
-width: 100%;
-padding-inline: 5em;
-padding-block: 2em;
-gap: 5em;
-display: flex;
-align-items: flex-start;
-justify-content: start;
+grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+gap: 2em;
+padding-top: 2em;
+padding-bottom: 2em;
 }
+
 .footer-column{
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  margin-inline: 2em;
 }
 
 .footer-column-title{
@@ -350,9 +363,6 @@ justify-content: start;
       transform: translate(120%);
       transition: 0.2s ease-out; /* velocidad de apertura Menu */
       top: calc(100% + 1em);
-      justify-content: right;
-      display: flex;
-      flex-direction: column;
       z-index: 10;
     }
   
