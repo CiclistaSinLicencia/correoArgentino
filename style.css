@@ -278,7 +278,7 @@ font-size: 20px;
 .noticias-wrapper h2{
   text-align: center;
   font-weight: 500;
-
+  margin-bottom: 2em;
   color: var(--clr-azulCorreo-400);
 }
 
@@ -292,7 +292,7 @@ text-decoration: underline;
 }
 .noticias-img-ctn{
 width: 100%;
-margin-top: 2em;
+
 text-decoration: none;
 }
 .noticias-img{
@@ -306,7 +306,7 @@ text-decoration: none;
 .noticias-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,350px));
-  gap: 4em;
+  gap: 2em;
 justify-content: center;
 }
 
