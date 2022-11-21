@@ -272,6 +272,8 @@ scale: 1.01;
 width: 100%;
 padding-inline: 2em;
 margin-block: 5em;
+font-size: 20px;
+
 }
 .noticias-wrapper h2{
   text-align: center;
@@ -363,12 +365,12 @@ padding-bottom: 2em;
   transition: 0.2s;
   width: 35px;
   height: 35px;
-  fill: #333;
+  fill: #222;
 
 }
 
 .footer-ctn-redes svg:hover{
-  fill: var(--clr-azulCorreo-400);
+  fill: #666;
 }
 #instagram{
   width: 25px;
@@ -380,14 +382,14 @@ padding-bottom: 2em;
   font-size: 18px;
 }
 .footer-column a{
-  color: #333;
+  color: #222;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   transition: 0.2s;
 }
 .footer-column a:hover{
-  color: var(--clr-azulCorreo-350);
+  color: #666;
 }
 
 /*----------End----------
